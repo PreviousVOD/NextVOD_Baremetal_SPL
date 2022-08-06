@@ -13,7 +13,7 @@ This bootloader will:
 
 | Offset | Content |
 |-|-|
-| 0x00 | text length |
+| 0x00 | end address of loadable sections |
 | 0x04 | entry point |
 
 ## Project status
