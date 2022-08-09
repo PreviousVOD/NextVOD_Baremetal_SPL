@@ -161,10 +161,10 @@ _pmb_poke_start_k:
     .long 0x40000380 /* Data entry #0 data     : LMI lower  half,  128MB, uncached, unbuffered */
     .long 0xF7100100 /* Data entry #1 register : LMI higher half,  128MB, uncached, unbuffered */
     .long 0x48000380 /* Data entry #1 data     : LMI higher half,  128MB, uncached, unbuffered */
-    .long 0xF7100200 /* Data entry #2 register : LMI lower  half,  128MB, uncached, unbuffered */
-    .long 0x40000380 /* Data entry #2 data     : LMI lower  half,  128MB, uncached, unbuffered */
-    .long 0xF7100300 /* Data entry #3 register : LMI higher half,  128MB, uncached, unbuffered */
-    .long 0x48000380 /* Data entry #3 data     : LMI higher half,  128MB, uncached, unbuffered */
+    .long 0xF7100200 /* Data entry #2 register : LMI lower  half,  128MB,   cached,   buffered */
+    .long 0x40000188 /* Data entry #2 data     : LMI lower  half,  128MB,   cached,   buffered */
+    .long 0xF7100300 /* Data entry #3 register : LMI higher half,  128MB,   cached,   buffered */
+    .long 0x48000188 /* Data entry #3 data     : LMI higher half,  128MB,   cached,   buffered */
     .long 0xF7100400 /* Data entry #4 register : EMI NOR uncached,  64MB, uncached, unbuffered */
     .long 0x00000310 /* Data entry #4 data     : EMI NOR uncached,  64MB, uncached, unbuffered */
     .long 0xF7100500 /* Data entry #5 register : EMI NOR   cached,  64MB,   cached,   buffered */
