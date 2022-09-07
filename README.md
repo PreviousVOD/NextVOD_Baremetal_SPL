@@ -13,8 +13,9 @@ This bootloader will:
 
 | Offset | Content |
 |-|-|
-| 0x00 | end address of loadable sections |
-| 0x04 | entry point |
+| 0x00 | start address of target memory region |
+| 0x04 | end address of loadable sections |
+| 0x08 | entry point |
 
 ## Project status
 TODO

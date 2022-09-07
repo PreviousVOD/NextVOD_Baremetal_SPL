@@ -119,8 +119,9 @@ _go_non_privileged:
 
 _copy_app:
     mov.l _app_copy_end_k, r0 /* App load location, in EMI */
-    mov.l @r0, r1 /* Offset 0, eidata */
-    mov.l _app_base_k, r2 /* App execute location, start of LMI RAM */
+    mov.l @r0, r1 /* Offset 0x04, eidata */
+    mov.l _app_base_k, r0 /* App base location, in LMI */
+    mov.l @r0, r2 /* Offset 0x00, stext */
 
 _loop_copy_app:
     mov.l @r0+, r3
@@ -252,8 +253,8 @@ _init_ram_k:
     .long _memory_setup_init_ram
 
 _app_base_k:
-    .long 0x80000000U /* App to be copied to */
+    .long 0xA0000000U /* stext */
 _app_copy_end_k:
-    .long 0xA0008000U /* eiaddr */
+    .long 0xA0008004U /* eiaddr */
 _app_entry_k:
-    .long 0xA0008004U
+    .long 0xA0008008U /* entry */
