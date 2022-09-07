@@ -253,7 +253,7 @@ _init_ram_k:
     .long _memory_setup_init_ram
 
 _app_base_k:
-    .long 0xA0000000U /* stext */
+    .long 0xA0008000U /* stext */
 _app_copy_end_k:
     .long 0xA0008004U /* eiaddr */
 _app_entry_k:
